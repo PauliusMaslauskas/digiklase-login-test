@@ -12,10 +12,10 @@ public class DigiklaseLogin {
     public String username;
 
 
-    public DigiklaseLogin(String email, String password, String nickname) {
+    public DigiklaseLogin(String email, String password, String username) {
         this.email = email;
         this.password = password;
-        this.username = nickname;
+        this.username = username;
     }
 
     public void fillAllFieldsLoginEmail(){
@@ -24,7 +24,7 @@ public class DigiklaseLogin {
         clickLogin();
     }
 
-    public void fillAllFieldsLoginNickname(){
+    public void fillAllFieldsLoginUsername(){
         fillUsername();
         fillPassword();
         clickLogin();
