@@ -127,7 +127,6 @@ public class DigiklaseLoginEmailTest {
         facebookButton.click();
 
         Assert.assertTrue(driver.getCurrentUrl().contains("www.facebook.com"));
-
     }
 
     @Test
@@ -139,6 +138,9 @@ public class DigiklaseLoginEmailTest {
         );
 
         digiklaseLogin.fillAllFieldsLoginEmail();
+
+        WebElement welcomeMessage = driver.findElement(By.xpath("/html/body/div[1]/div/main/div[1]/div/div/div/h1"));
+        Assert.assertTrue(welcomeMessage.isDisplayed());
     }
 
     @BeforeMethod

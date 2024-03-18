@@ -109,7 +109,6 @@ public class DigiklaseLoginUsernameTest {
         facebookButton.click();
 
         Assert.assertTrue(driver.getCurrentUrl().contains("www.facebook.com"));
-
     }
 
     @Test
@@ -121,6 +120,9 @@ public class DigiklaseLoginUsernameTest {
         );
 
         digiklaseLogin.fillAllFieldsLoginUsername();
+
+        WebElement welcomeMessage = driver.findElement(By.xpath("/html/body/div[1]/div/main/div[1]/div/div/div/h1"));
+        Assert.assertTrue(welcomeMessage.isDisplayed());
     }
 
     @BeforeMethod
@@ -138,7 +140,7 @@ public class DigiklaseLoginUsernameTest {
 
     @AfterClass
     public void afterClass() {
-        // driver.quit();
+         driver.quit();
     }
 }
 
